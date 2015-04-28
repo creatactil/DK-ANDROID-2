@@ -7,7 +7,7 @@ if (typeof xdni == 'undefined'){
 		$.mobile.changePage("#pagina1", {transition: "slide"},
             true,
             true);
-		globo();
+		
 		nhijos();
 		nombresalu();
 		dmanana();
@@ -15,5 +15,6 @@ if (typeof xdni == 'undefined'){
 		dtarde();
 		buscarobserva1();
 		comprobarid()
+		globo();
 }
 	}

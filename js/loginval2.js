@@ -45,13 +45,13 @@ function loginVal2(){
 				localStorage.pa2 = xpa2;
 				
 				$.mobile.changePage("#pagina1");
-				globo();
 				nhijos();
 				nombresalu();
 				dmanana();
 				dmediodia();
 				dtarde();
 				comprobarid()
+				globo();
 
 			});
 			}
