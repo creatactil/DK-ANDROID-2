@@ -51,6 +51,7 @@ function loginVal2(){
 				dmanana();
 				dmediodia();
 				dtarde();
+				comprobarid()
 
 			});
 			}
