@@ -65,10 +65,6 @@ function comprobarid(){
 	var xregid = $("#regId").val();
 	var xdni = localStorage.dni;
 	
-	alert(xregid);
-	alert(xdni);
-	
-	
 	
 	$.ajax({
 		url: 'http://ci.creatactil.com/php/comprobarid.php',
