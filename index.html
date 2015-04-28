@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="mobile-web-app-capable" content="yes">
+<title>DiarioKid</title>
+
+<link rel="stylesheet" href="css/estilo.css" type="text/css" media="screen"/>
+
+<link rel="stylesheet" href="tema/temaci.css" />
+<link rel="stylesheet" href="tema/jquery.mobile.icons.min.css" />
+<link rel="stylesheet" href="jqm/jquery.mobile.structure-1.4.2.min.css" />
+
+<script src="jqm/jquery-1.10.2.min.js"></script>
+<script src="jqm/jquery.mobile-1.4.2.min.js"></script>
+
+<link rel="shortcut icon" href="imagenes/300ico.png">
+<link rel="apple-touch-icon" sizes="72x72" href="72.png" />
+<link rel="apple-touch-icon" sizes="114x114" href="114.png" />
+<link rel="apple-touch-icon" sizes="144x144" href="144.png" />
+
+<script type="text/javascript" src="phonegap.js"></script>
+<script type="text/javascript" src="PushNotification.js"></script>
+<script type="text/javascript" src="js/index.js"></script>
+
+<script type="text/javascript"> 
+        //El registro al servicio de google lo hacemos automáticamente
+       app.initialize();
+	
+</script>
+
+<script src="js/index.js"></script>
+<script src="js/iniciar.js"></script>
+<script src="js/registrarFamiliar.js"></script>
+<script src="js/nuevoAlumno.js"></script>
+<script src="js/mostrarDatos.js"></script>
+<script src="js/loginval2.js"></script>
+<script src="js/passemail.js"></script>
+
+<script src="js/init.js"></script>
+<script src="js/sesion.js"></script>
+<!--<script src="js/lasesion.js"></script> -->
+<script src="js/listaFotos.js"></script>
+<script src="js/listamensajes.js"></script>
+<!--<script src="js/inicio.js"></script> -->
+<script src="js/nhijos.js"></script>
+<script src="js/nombresalu.js"></script>
+<script src="js/dmanana.js"></script>
+<script src="js/dmediodia.js"></script>
+<script src="js/dtarde.js"></script>
+<script src="js/fechaatras.js"></script>
+<script src="js/pagAtras.js"></script>
+<script src="js/medAtras.js"></script>
+<script src="js/tarAtras.js"></script>
+<script src="js/fechanext.js"></script>
+<script src="js/Avanzapag.js"></script>
+<script src="js/medAvanza.js"></script>
+<script src="js/tarAvanza.js"></script>
+<script src="js/borrarmensaje.js"></script>
+<script src="js/borrarfoto.js"></script>
+<script src="js/globo.js"></script>
+<script src="js/firma.js"></script>
+
+<script>
+$(document).ready(function(){
+
+init();
+});
+</script>
+
+</head>
+
+<body> 
+
+<!---------------------------PAGINA 0-------------------------------------->
+<div data-role="page" data-theme="a" id="pagina0">
+  <div data-role="header">
+    <h1>DiarioKid</h1>
+  </div>
+	
+  <div data-role="main" class="ui-content" >
+  
+         <div class="ui-grid-solo" align="center" style="width:90%; margin-left:5%; margin-top:15%; margin-bottom:15%;">
+         <form name="form2" id="form2" method="POST">
+    			<label for="usuario" >Correo electrónico:</label>        
+        		<input name="usuario" type="email" id="usuario" autofocus>        
+     			<!---------->         
+        		<label for="pa2">Contraseña:</label>
+        		<input type="password" name="pa2" id="pa2"> 
+                
+                <a data-role="button" data-icon="check" style="width:35%; background-color:#AEDAFF" data-inline="true" onClick="loginVal2()">Entrar</a> 
+               <!-- <input type="submit" value="Entrar" data-icon="check" data-transition="slide"  style="width:120px;" data-inline="true"> -->
+                <a data-role="button" data-icon="edit" href="#pagina2" style="width:35%; background-color:#B8E8C1;" data-inline="true" onClick="mostrarDatos()">Registrate</a>               		
+           </form> 
+              <br><br><a href="" onClick="passEmail()">He olvidado mi contraseña</a>                
+		</div>
+                      
+	 </div>
+
+  <div data-role="footer" data-position="fixed">
+   
+   	<label style="font-size:15px;"><center>&copy; creaTáctil S.L.</center></label>
+   
+  </div>
+  
+</div> 
+<!------- FIN PAGINA 0------------------------------------------------------->
+
+<!--PAGINA 1-->
+<div data-role="page" data-theme="a" id="pagina1" style="background:url(imagenes/fondogusy.png);">
+  <div data-role="header">
+    <h1>DiarioKid</h1>
+    <a href="" data-role="button" class="ui-btn-right" data-mini="true" data-icon="power" onClick="desconectar()" data-iconpos="notext"></a>
+  </div>
+	<a href="#" data-role="button" data-icon="arrow-l" onClick="fechaatras(1), buscarobserva2(0), pagAtras(0), medAtras(0), tarAtras(0)" data-iconpos="notext" data-inline="true" style="margin-left: 10px;"></a>    
+   	<a href="#" data-role="button" data-icon="arrow-r" onClick="fechanext(-1), buscarobserva3(0), Avanzapag(0), medAvanza(0), tarAvanza(0)" data-iconpos="notext" style="float:right" data-inline="true"></a>
+  <div data-role="main" class="ui-content">
+  
+    <div id="hijo1" class="hijos1">
+    <input name="nombrealumno1" type="hidden" id="nombrealumno1"> 
+    <input name="elprimerhijo" type="hidden" id="elprimerhijo">
+        <div class="ui-grid-c" align="center" style="width:100%;">
+        <span id="nombre1" class="nombre1"></span><span class="derecha" id="fecha1"></span><br>
+        <hr style="width:98%;">
+                <!-- fila 1 -->
+                <div class="ui-block-a" style="width:25%;"></div> 
+                <div class="ui-block-b" style="width:25%;"><strong>Mañana</strong></div>  
+                <div class="ui-block-c" style="width:25%;"><strong>Mediodía</strong></div> 
+                <div class="ui-block-d" style="width:25%;"><strong>Tarde</strong></div> 
+        
+                <!-- fila 2 -->  
+                <div class="ui-block-a"><img src="imagenes/carro.png"></div>         	
+                <div class="ui-block-b"><img src="" id=mcarro1></div>  
+                <div class="ui-block-c"><img src="" id=mecarro1> </div> 
+                <div class="ui-block-d"><img src="" id=tcarro1></div> 
+                
+                <!-- fila 3 -->  
+                <div class="ui-block-a"><img src="imagenes/cuchara.png"></div>         	
+                <div class="ui-block-b"><img src="" id=mbiberon1></div>              
+                <div class="ui-block-c"><img src="" id=mebiberon1></div>             
+                <div class="ui-block-d"><img src="" id=tbiberon1></div>  
+                
+                 <!-- fila 4 -->  
+                <div class="ui-block-a"><img src="imagenes/pelota.png"></div>         	
+                <div class="ui-block-b"><img src="" id=mpelota1></div>              
+                <div class="ui-block-c"><img src="" id=mepelota1></div>             
+                <div class="ui-block-d"><img src="" id=tpelota1></div>
+                
+                 <!-- fila 5 -->  
+                <div class="ui-block-a"><img src="imagenes/panal.png"></div> 
+                <div class="ui-block-b"><img src="" id=mpanal1></div>              
+                <div class="ui-block-c"><img src="" id=mepanal1></div>             
+                <div class="ui-block-d"><img src="" id=tpanal1></div> 
+                
+                 <!-- fila 6 -->  
+                <div class="ui-block-a"><img src="imagenes/termometro.png"></div> 
+                <div class="ui-block-b"><img src="" id=mcorazon1></div>              
+                <div class="ui-block-c"><img src="" id=mecorazon1></div>             
+                <div class="ui-block-d"><img src="" id=tcorazon1></div> 
+      
+            </div>
+			<hr style="width:98%;">
+        	<span style="margin-left:2%"><strong >Nota:</strong></span><span id="observaciones" style="margin-left:1%;"></span>
+   		</div><!---fin hijo1--->
+        <br>
+        
+        <div id="hijo2" class="hijos2" style="display:none;">
+        <input name="nombrealumno2" type="hidden" id="nombrealumno2">
+        <input name="elsegundohijo" type="hidden" id="elsegundohijo">
+        <div class="ui-grid-c" align="center" style="width:100%;">
+        <span id="nombre2" class="nombre1"></span><span class="derecha" id="fecha2"></span><br>
+        <hr style="width:98%;">
+                <!-- fila 1 -->
+                <div class="ui-block-a" style="width:25%;"></div> 
+                <div class="ui-block-b" style="width:25%; margin-bottom:3%;"><strong>Mañana</strong></div>  
+                <div class="ui-block-c" style="width:25%; margin-bottom:3%;"><strong>Mediodía</strong></div> 
+                <div class="ui-block-d" style="width:25%; margin-bottom:3%;"><strong>Tarde</strong></div> 
+        
+                <!-- fila 2 -->  
+                <div class="ui-block-a"><img src="imagenes/carro.png"></div>         	
+                <div class="ui-block-b"><img src="" id=mcarro2 ></div>  
+                <div class="ui-block-c"><img src="" id=mecarro2> </div> 
+                <div class="ui-block-d"><img src="" id=tcarro2></div> 
+                
+                <!-- fila 3 -->  
+                <div class="ui-block-a"><img src="imagenes/cuchara.png"></div>         	
+                <div class="ui-block-b"><img src="" id=mbiberon2></div>              
+                <div class="ui-block-c"><img src="" id=mebiberon2></div>             
+                <div class="ui-block-d"><img src="" id=tbiberon2></div>  
+                
+                 <!-- fila 4 -->  
+                <div class="ui-block-a"><img src="imagenes/pelota.png"></div>         	
+                <div class="ui-block-b"><img src="" id=mpelota2></div>              
+                <div class="ui-block-c"><img src="" id=mepelota2></div>             
+                <div class="ui-block-d"><img src="" id=tpelota2></div>
+                
+                 <!-- fila 5 -->  
+                <div class="ui-block-a"><img src="imagenes/panal.png"></div> 
+                <div class="ui-block-b"><img src="" id=mpanal2></div>              
+                <div class="ui-block-c"><img src="" id=mepanal2></div>             
+                <div class="ui-block-d"><img src="" id=tpanal2></div> 
+                
+                 <!-- fila 6 -->  
+                <div class="ui-block-a"><img src="imagenes/termometro.png"></div> 
+                <div class="ui-block-b"><img src="" id=mcorazon2></div>              
+                <div class="ui-block-c"><img src="" id=mecorazon2></div>             
+                <div class="ui-block-d"><img src="" id=tcorazon2></div> 
+      
+            </div>
+			<hr style="width:98%;">
+        	<span style="margin-left:2%"><strong >Nota:</strong></span><span id="observaciones2" style="margin-left:1%;"></span><br>
+   		</div><!---fin hijo 2--->
+        
+        
+
+    </div>
+
+  <div data-role="footer" data-position="fixed"> 
+   <div data-role="navbar">
+            <ul>
+            <li><a href="#pagina1" data-role="button" data-icon="calendar" onClick="init()" style="background-color:#FAB5FF">Diario</a></li>
+            <li><a href="#pagina3" data-role="button" data-icon="mail" onClick="crearLista()" style="background-color:#AEDAFF"><img src="" class="globo" style="float:left" >  Mensajes</a></li>
+            <li><a href="#pagina4" data-role="button" data-icon="camera" onClick="listaFotos()" style="background-color:#B8E8C1;"><img src="" class="globofoto" style="float:left"> Fotos</a></li>
+            </ul>
+	</div>
+  </div>
+</div> 
+<!-- FIN PAGINA 1-->
+<!---------------------------PAGINA 2--------------------------------------->
+<div data-role="page" data-theme="a" id="pagina2">
+  <div data-role="header" >
+    <h1>Registro</h1>
+  </div>
+
+  <div data-role="main" class="ui-content">
+   
+  <form name="formulario1" id="formulario1" class="familiar">
+        
+        <strong>Datos del familiar</strong>
+        <hr>
+           
+        Nombre y apellidos Padre o Madre:
+        <input name="nombre_familiar" type="text" id="nombre_familiar" value="" placeholder="Tu nombre y apellidos">
+	    
+        Teléfono móvil:
+        <input name="telefono" type="number" maxlength="9" id="telefono" placeholder="Tu número de móvil">
+          
+         
+      	Correo electrónico:
+        <input name="correo" type="text" id="correo" placeholder="Tu correo electrónico">
+        
+        Contraseña:
+        <input name="pa1" id="pa1" type="password" placeholder="Tu contraseña">
+        (Máx. 20 caracteres)
+        <br><br>	
+    	Parentesco:
+    	<fieldset data-role="controlgroup" data-type="horizontal" >
+       	<select name="parentesco" id="parentesco" data-native-menu="false">
+          <option value="MADRE" selected>Madre
+          <option value="PADRE">Padre</option>
+          <option value="TUTOR">Tutor Legal</option>
+          <option value="PERSONA AUTORIZADA">Persona Autorizada</option>
+       </select>
+       </fieldset>
+   		<br>
+        <strong>Datos del alumno/a</strong>
+        <hr>
+        Nombre del alumno:
+        <input name="nombre_alumno" type="text" id="nombre_alumno" placeholder="Nombre del alumno">
+       
+       	Apellidos:
+        <input name="apellidos" type="text" id="apellidos" placeholder="Apellidos del alumno">
+        Nº de matrícula:
+        <input name="cial" id="cial" placeholder="Solicitar al Centro...">
+   		
+          <input name="regId" id="regId" type="hidden">   
+   </form> 
+  			<div id="deviceready" class="blink" hidden="true">
+                <p class="event listening">Connecting to Device</p>
+                <p class="event received">Device is Ready</p>
+            </div>
+   <div>
+         <!-- Botones de registro -->
+         <center>
+      <a href="#pagina7" onClick="" data-icon="check" data-iconpos="left" data-role="button" data-rel="dialog" style="width:40%; background-color:#AEDAFF">Guardar</a>
+      	</center>
+   </div> 
+   
+  </div>
+	<br><br><br><br><br><br><br><br><br><br>
+  <div data-role="footer" >
+ 	<label style="font-size:15px;"><center>&copy; creaTáctil S.L.</center></label>
+  </div>
+</div> 
+<!----------------- FIN PAGINA 2-------------------------------------------------->
+
+
+<!----------------------------PAGINA 3-------------------------------->
+<div data-role="page" id="pagina3" style="background:url(imagenes/fondogusy.png);">
+	
+    <div data-role="header">   
+	<a href="#pagina1" data-role="button" data-icon="back" data-iconpos="notext" onClick="init()">Atrás</a>
+      <h1>CIRCULARES</h1>
+	<a href="#pagina1" data-role="button" data-icon="home" data-iconpos="notext" onClick="init()">Inicio</a>
+    </div> 
+	
+	 <div data-role="content" id="contenido" style="margin-top:0; padding-top:0;">
+			
+		   <!-- Aqui se añade el listado de mensajes NO LEIDO-->
+		  <ul data-role="listview" data-theme="a"  id="lista2"  data-inset="true">
+		  </ul>
+          
+          <br>
+          
+          <!-- Aqui se añade el listado de mensajes LEIDO-->
+           <ul data-role="listview" data-theme="b"  id="lista3"  data-inset="true" >
+		  </ul>
+	 
+      <div class="elgif"></div>
+       
+       <!--<center><img src="imagenes/31.gif" id="gif" width="54" height="55" style="margin-top:20%;"/></center>-->
+<div data-role="popup" id="purchase3" data-theme="a" data-overlay-theme="b" class="ui-content" style="max-width:340px; padding-bottom:2em;">
+  <h3>Circular</h3>
+<p>¿Quieres eliminar la Circular?</p>
+	<label id="id_aux3" style="display:none">Id:</label>
+    <a href="index.html" data-rel="back" class="ui-shadow ui-btn ui-corner-all ui-btn-b ui-icon-check ui-btn-icon-left ui-btn-inline ui-mini" onClick="borrarMensaje()">Borrar</a>
+    <a href="index.html" data-rel="back" class="ui-shadow ui-btn ui-corner-all ui-btn-b ui-icon-delete ui-btn-icon-left ui-btn-inline ui-mini" >Cancelar</a>
+</div>        
+        
+        
+        
+        </div> 
+ <div data-role="footer" data-position="fixed" id="piedepagina">
+   
+  </div>   
+ 
+</div>
+<!-- FIN PAGINA 3-->
+
+<!------------------------PAGINA 7----------------------------------------------->
+<div data-role="page" id="pagina7" data-theme="a">
+	
+    <div data-role="header" data-add-back-btn="true" >  
+	  <h1>Política de Privacidad y LOPD</h1>
+	</div> 
+	
+	 <div data-role="content" id="ley">
+			 <center>
+            <div data-role="controlgroup" data-type="horizontal">
+            <a href="#" data-role="button" data-rel="back" data-icon="back">Cancelar</a>
+			<a href="#" data-role="button" onClick="registrarFamiliar();" data-icon="check">Aceptar</a>
+            </div>
+            </center>
+            
+            <p>
+            <strong>POLÍTICA DE TRATAMIENTO DE DATOS DE CARÁCTER PERSONAL </strong><br>
+            En cumplimiento de lo establecido en la Ley Orgánica 15/1999, de 13 de diciembre, de Protección de Datos de Carácter Personal, se pone en conocimiento de los usuarios de este sitio web lo siguiente: <br>
+            
+<strong>1.</strong> Los datos que los usuarios faciliten a CREATÁCTIL S.L. serán incorporados a una base de datos de la que es titular y responsable CREATÁCTIL S.L., CIF B76629021.<br>
+<strong>2.</strong> Los usuarios garantizarán los datos de carácter personal, su veracidad, exactitud, autenticidad y vigencia. En este sentido, será obligación de los usuarios mantener actualizados los datos de forma tal que correspondan a la realidad en cada momento.<br>
+<strong>3.</strong> Al facilitar datos de carácter personal a CREATÁCTIL S.L., mediante la cumplimentación de formularios de recogida de datos o su envío a través de cualquier otro medio, los usuarios declaran aceptar plenamente y sin reservas la incorporación de los datos facilitados a los ficheros de la mercantil CREATÁCTIL S.L. y su tratamiento automatizado, en los términos estipulados en el presente documento.
+Los citados ficheros están oportunamente comunicados e inscritos en el Registro General de la Agencia española de Protección de Datos, al que los usuarios pueden acceder gratuitamente si así lo desean para comprobar su situación.<br> 
+<strong>4.</strong> La recogida de datos personales y su tratamiento automatizado tiene como finalidad posibilitar o facilitar la gestión, administración, mejora y ampliación de los distintos servicios, la elaboración de estadísticas, la gestión o seguimiento de incidencias, o servicios ofrecidos por info@creatactil.com.<br>
+<strong>5.</strong> CREATÁCTIL S.L en ningún caso venderá ni arrendará datos personales de los usuarios. El usuario podrá denegar o revocar su consentimiento mediante el envío de un e-mail a info@creatactil.com.<br>
+<strong>6.</strong> Los usuarios podrán ejercitar, en cualquier momento, los derechos de acceso, rectificación, cancelación y oposición de sus datos personales. El ejercicio de estos derechos podrá efectuarse mediante el envío de un e-mail a info@creatactil.com.<br>
+<strong>7.</strong> CREATÁCTIL S.L se compromete a no recabar información innecesaria sobre sus usuarios, a tratar con extrema diligencia la información personal que le puedan facilitar, y a cumplir en cualquier fase del tratamiento con la obligación de guardar secreto respecto de los datos facilitados por los usuarios. 
+Asimismo, CREATÁCTIL S.L se compromete a adoptar en todo momento los niveles de seguridad legalmente requeridos, para evitar la pérdida, mal uso, alteración, acceso no autorizado o robo de datos personales, implementando a dicho fin todos los medios y sistemas técnicos a su alcance, habida cuenta del estado de la tecnología, la naturaleza de los datos almacenados y los riesgos a que están expuestos, ya provengan de la acción humana o del medio físico o natural. Ello no obstante, los usuarios deben ser conscientes de que las medidas de seguridad en Internet no son inexpugnables, y asumir los riegos que ello conlleva. <br>
+<strong>8.</strong> CREATÁCTIL S.L se reserva el derecho de modificar en cualquier momento su política de tratamiento y seguridad de datos personales, siempre respetando la legislación vigente en materia de protección de datos, y previa comunicación a los interesados, bien mediante publicación en esta misma página o en cualquier otro lugar del website, bien mediante e-mail a los interesados, o por cualquier otro medio de comunicación o difusión que se considere oportuno. 
+
+            
+            
+            
+            </p>
+		
+		 
+	   	    
+           
+            </div>
+    
+ 
+</div>
+
+<!--------------------- FIN PAGINA 7------------------------------>
+
+<!----------------------------PAGINA 4-------------------------------->
+<div data-role="page" id="pagina4" style="background:url(imagenes/fondogusy.png);">
+	
+    <div data-role="header">   
+	<a href="#pagina1" data-role="button" data-icon="back" data-iconpos="notext" onClick="init()">Atrás</a>
+      <h1>FOTOS</h1>
+	<a href="#pagina1" data-role="button" data-icon="home" data-iconpos="notext" onClick="init()">Inicio</a>
+    </div> 
+	
+	 <div data-role="content" id="contenido" style="margin-top:0; padding-top:0;">
+			
+		   <!-- Aqui se añade el listado de mensajes NO LEIDO-->
+		  <ul data-role="listview" data-theme="a"  id="lista"  data-inset="true">
+		  </ul>
+          
+          <br>
+          
+          <!-- Aqui se añade el listado de mensajes LEIDO-->
+           <ul data-role="listview" data-theme="b"  id="lista1"  data-inset="true" >
+		  </ul>
+	 
+     <div class="elgif2"></div>
+     
+<div data-role="popup" id="purchase2" data-theme="a" data-overlay-theme="b" class="ui-content" style="max-width:340px; padding-bottom:2em;">
+    <h3>Circular</h3>
+<p>¿Quieres eliminar la Circular?</p>
+	<label id="id_aux4" style="display:none">Id:</label>
+    <a href="index.html" data-rel="back" class="ui-shadow ui-btn ui-corner-all ui-btn-b ui-icon-check ui-btn-icon-left ui-btn-inline ui-mini" onClick="borrarFoto()">Borrar</a>
+    <a href="index.html" data-rel="back" class="ui-shadow ui-btn ui-corner-all ui-btn-b ui-icon-delete ui-btn-icon-left ui-btn-inline ui-mini" >Cancelar</a>
+</div>        
+        
+        
+        
+        </div> 
+ <div data-role="footer" data-position="fixed" id="piedepagina2">
+
+  </div>   
+ 
+</div>
+
+<!---------------------------- PAGINA 11 -------------------------------->
+<div data-role="page" id="page11" data-theme="a">
+	
+    <div data-role="header" data-add-back-btn="true" data-iconpos="notext" >  
+	  <h1>Firmar Autorización</h1>
+	</div> 
+	
+	 <div data-role="content" id="firma">
+	   <p>
+           <strong> Autorización Paterna, Materna o Tutor Legal:</strong></p>
+	   		<br>
+           	
+	   	             
+             <label>Nº de registro: </label><span id="registrofirma"></span>
+            <br>
+			<span hidden="true" id="cialfirma"></span>        
+            <label>Nombre: </label><span id="nombrefirma"></span>
+           
+            
+            <br>
+            <span id="codigofirma" hidden="true"></span>
+	   </p>
+		
+		 
+	   	    
+            <center>
+            <div data-role="controlgroup" data-type="horizontal">
+             <a href="#" data-role="button" data-rel="back" data-icon="back">Cancelar</a>
+			<a href="#" data-role="button" onClick="firma()" data-icon="check">Aceptar</a>
+            </div>
+            </center>
+            </div>
+    
+ 
+</div>
+<!----------------- FIN PAGINA 11 -------------------->
+<!--------------------------------------------------------------------- PAGINA 12 ----------------------------------------------------------------->
+<div data-role="page" id="pagina12" data-theme="a" >
+	
+    <div data-role="header">  
+	  <h1>Añadir alumn@</h1>
+	</div> 
+	
+	 <div data-role="content" id="nuevoalumno">
+	   		<p>
+           
+           Sus datos han sido guardado.<br>
+           
+           ¿Quiere añadir otro alumn@?
+	   		
+	   </p>
+		
+		 
+	   	    
+            <center>
+            <div data-role="controlgroup" data-type="horizontal">
+             <a href="#pagina1" data-role="button" data-icon="back" style="background-color:#B8E8C1;">No</a>
+			<a href="#pagina2" data-role="button" onClick="nuevoAlumno()" data-icon="check" style="background-color:#AEDAFF">Si</a>
+            </div>
+            </center>
+            </div>
+    
+ 
+</div>
+<!---------------- FIN PAGINA 12 -------------------------------->
+
+</body>
+</html>

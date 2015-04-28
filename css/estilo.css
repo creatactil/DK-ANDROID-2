@@ -1,0 +1,70 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+.hijos1 {
+	border: thin solid #666;
+	font-size: small;
+	border-radius: 10px;
+	box-shadow: 10px 10px 5px #999999;
+	font-weight: bold;
+	word-spacing: normal;
+	text-align: left;
+	white-space: normal;
+	background-color:#F0F0F0;
+	padding-bottom: 5px;
+	}
+.hijos2 {
+	border: thin solid #666;
+	width: auto;
+	height: auto;
+	font-size: small;
+	border-radius: 10px;
+	box-shadow: 10px 10px 5px #999999;
+	padding-top: 3px;
+	padding-right: 3px;
+	padding-bottom: 5px;
+	padding-left: 6px;
+	font-weight: bold;
+	background-color: #F0F0F0;
+	}	
+	
+.datos {
+	float: none;
+	width: auto;
+	vertical-align: text-top;
+	white-space: normal;
+	padding: 5px;
+	position: absolute;
+	color: #000;
+	
+}
+.derecha{
+	display: inline;
+	text-align: right;
+	font-weight: bold;
+	vertical-align: auto;
+	left: 0px;
+	top: 0px;
+	right: 0px;
+	bottom: 0px;
+	margin-top: 3px;
+	float: right;
+	margin-right: 1%;
+	margin-left: 0px;
+	width: auto;
+	
+} 
+.nombre1{
+	float: left;
+	margin-left: 7px;
+	margin-top: 3px;
+	width: auto;
+	
+	}
+
+	
+.cabecera{
+	background-color:#FAB5FF;
+	
+	}
