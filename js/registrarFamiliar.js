@@ -97,11 +97,16 @@
 			
             }
 			
+		
+		
+		
+		
 		localStorage.nombre_familiar = xnombre;
 		localStorage.telefono = xtelefono;
 		localStorage.dni = xdni;
 		localStorage.correo = xcorreo;
 		localStorage.parentesco = xparentesco;	
+		
 		
 				
 		$.mobile.changePage("#pagina12");
