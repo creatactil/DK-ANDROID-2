@@ -16,5 +16,6 @@ if (typeof xdni == 'undefined'){
 		buscarobserva1();
 		comprobarid()
 		globo();
+		
 }
 	}
