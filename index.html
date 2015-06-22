@@ -31,7 +31,7 @@
 </script>
 
 <script src="js/index.js"></script>
-<!--<script src="js/iniciar.js"></script> -->
+
 <script src="js/registrarFamiliar.js"></script>
 <script src="js/nuevoAlumno.js"></script>
 <script src="js/mostrarDatos.js"></script>
@@ -41,6 +41,8 @@
 <script src="js/init.js"></script>
 <script src="js/sesion.js"></script>
 <!--<script src="js/lasesion.js"></script> -->
+<script src="js/listaweb.js"></script>
+<script src="js/listacorreo.js"></script>
 <script src="js/listaFotos.js"></script>
 <script src="js/listamensajes.js"></script>
 <!--<script src="js/inicio.js"></script> -->
@@ -228,7 +230,7 @@ init();
             <li><a id="menu" href="#pagina1" data-role="button" data-icon="calendar" onClick="init()" style="background-color:#e6697b">Diario</a></li>
             <li><a id="menu" href="#pagina3" data-role="button" data-icon="mail" onClick="crearLista()" style="background-color:#418d6a"><img src="" class="globo" style="float:left" >  Mensajes</a></li>
             <li><a id="menu" href="#pagina4" data-role="button" data-icon="camera" onClick="listaFotos()" style="background-color:#4779b2"><img src="" class="globofoto" style="float:left"> Fotos</a></li>
-            <li><a id="menu" href="#pagina5" data-role="button" data-icon="info" style="background-color:#e8df58">Ayuda</a></li>
+            <li><a id="menu" href="#pagina6" data-role="button" data-icon="plus" style="background-color:#e8df58">Más...</a></li>
             </ul>
 	</div>
   </div>
@@ -398,7 +400,7 @@ init();
     <li><a id="menu" href="#pagina1" data-role="button" data-icon="calendar" onClick="init()" style="background-color:#e6697b">Diario</a></li>
     <li><a id="menu" href="#pagina3" data-role="button" data-icon="mail" onClick="crearLista()" style="background-color:#418d6a"><img src="" class="globo" style="float:left" >  Mensajes</a></li>
     <li><a id="menu" href="#pagina4" data-role="button" data-icon="camera" onClick="listaFotos()" style="background-color:#4779b2;"><img src="" class="globofoto" style="float:left"> Fotos</a></li>
-    <li><a id="menu" href="#pagina5" data-role="button" data-icon="info" style="background-color:#e8df58">Ayuda</a></li>
+    <li><a id="menu" href="#pagina6" data-role="button" data-icon="plus" style="background-color:#e8df58">Más...</a></li>
     </ul>
 	</div>
  
@@ -406,6 +408,54 @@ init();
 	 
 </div> 
 
+<!----------------------------PAGINA 6-------------------------------->
+<div data-role="page" id="pagina6" data-theme="a" style="background:url(imagenes/fondogusy.png);">
+	 
+     
+	<div data-role="header" data-position="fixed" data-theme="a">
+    <a href="#page1" data-role="button" data-transition="slide" data-icon="carat-l" data-iconpos="notext" onClick="init()" data-theme="a">Atrás</a>
+		<h1>COMUNICACIÓN</h1>
+	</div>
+	
+    <div data-role="content">	
+		
+        
+      <div class="ui-grid-a" style="margin-top:10%" >
+        	<div class="ui-block-a">
+            	<center><a onClick="listacorreo();"><img src="imagenes/autorizar.png" width="80" height="80"/></a></center>          
+            </div>
+            <div class="ui-block-b">        
+            	<center><a onClick="listacorreo();"><img src="imagenes/medicacion.png" width="80" height="80" style="margin-top:-5px;"/></a></center> 
+            </div>          
+        </div>
+        <div class="ui-grid-a" style="margin-top:10%;">
+        	<div class="ui-block-a">
+            	<center>
+                <a href="" onClick="listaweb();"><img src="imagenes/web.png" width="78" height="78"/></a>
+            	</center>                          
+          </div>
+            <div class="ui-block-b">        
+            	<center><a href="#pagina5"><img src="imagenes/ayuda.png" width="78" height="78"/></a></center>
+          </div>          
+        </div>  
+        	   
+            
+    </div><!--fin content -->
+	
+    
+  <div data-role="footer" data-theme="a" data-position="fixed">
+    <div data-role="navbar" >
+    <ul>
+    <li><a id="menu" href="#pagina1" data-role="button" data-icon="calendar" onClick="init()" style="background-color:#e6697b">Diario</a></li>
+    <li><a id="menu" href="#pagina3" data-role="button" data-icon="mail" onClick="crearLista()" style="background-color:#418d6a"><img src="" class="globo" style="float:left" >  Mensajes</a></li>
+    <li><a id="menu" href="#pagina4" data-role="button" data-icon="camera" onClick="listaFotos()" style="background-color:#4779b2;"><img src="" class="globofoto" style="float:left"> Fotos</a></li>
+    <li><a id="menu" href="#pagina6" data-role="button" data-icon="plus" style="background-color:#e8df58">Más...</a></li>
+    </ul>
+	</div>
+ 
+    </div>
+	 
+</div> 
 
 <!------------------------PAGINA 7----------------------------------------------->
 <div data-role="page" id="pagina7" data-theme="a">
@@ -451,6 +501,12 @@ Asimismo, CREATÁCTIL S.L se compromete a adoptar en todo momento los niveles de
 </div>
 
 <!--------------------- FIN PAGINA 7------------------------------>
+
+
+
+
+
+
 
 <!----------------------------PAGINA 4-------------------------------->
 <div data-role="page" id="pagina4" style="background:url(imagenes/fondogusy.png);">
