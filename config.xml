@@ -49,13 +49,8 @@
     <!-- Plugins -->
 
    
-	<plugin name="File" spec="n/a" />
-	<plugin name="FileTransfer" spec="n/a" />
-	<plugin name="InAppBrowser" spec="n/a" />
-	<plugin name="Media" spec="n/a" />
-	<plugin name="Notification" spec="n/a" />
-	<plugin name="SplashScreen" spec="n/a" />
-	<plugin name="com.phonegap.plugins.pushplugin" source="pgb" spec="n/a" />
+	
+	
 	<plugin name="org.apache.cordova.battery-status" source="pgb" spec="0.2.11" />
 	<plugin name="org.apache.cordova.camera" source="pgb" spec="0.3.2" />
 	<plugin name="org.apache.cordova.console" source="pgb" spec="n/a" />
