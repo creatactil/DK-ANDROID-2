@@ -45,13 +45,13 @@
 <script src="js/listacorreo.js"></script>
 <script src="js/listaFotos.js"></script>
 <script src="js/listamensajes.js"></script>
-<!--<script src="js/inicio.js"></script> -->
 <script src="js/nhijos.js"></script>
 <script src="js/nombresalu.js"></script>
 <script src="js/dmanana.js"></script>
 <script src="js/dmediodia.js"></script>
 <script src="js/dtarde.js"></script>
 <script src="js/fechaatras.js"></script>
+<script src="js/portada.js"></script>
 <script src="js/pagAtras.js"></script>
 <script src="js/medAtras.js"></script>
 <script src="js/tarAtras.js"></script>
@@ -94,9 +94,9 @@ init();
         		<label for="pa2">Contraseña:</label>
         		<input type="password" name="pa2" id="pa2"> 
                 
-                <a id="menu" data-role="button" data-icon="check" style="width:35%; background-color:#418d6a" data-inline="true" onClick="loginVal2()">Entrar</a> 
+                <a id="menu" data-role="button" data-icon="check" style="width:35%; background-color:#8cc63e" data-inline="true" onClick="loginVal2()">Entrar</a> 
                <!-- <input type="submit" value="Entrar" data-icon="check" data-transition="slide"  style="width:120px;" data-inline="true"> -->
-                <a id="menu" data-role="button" data-icon="edit" href="#pagina2" style="width:35%; background-color:#4779b2;" data-inline="true" onClick="mostrarDatos()">Registrate</a>               		
+                <a id="menu" data-role="button" data-icon="edit" href="#pagina2" style="width:35%; background-color:#9dcde3;" data-inline="true" onClick="mostrarDatos()">Registrate</a>               		
            </form> 
               <br><br><a href="" onClick="passEmail()">He olvidado mi contraseña</a>                
 		</div>
@@ -113,7 +113,7 @@ init();
 <!------- FIN PAGINA 0------------------------------------------------------->
 
 <!--PAGINA 1-->
-<div data-role="page" data-theme="a" id="pagina1" style="background:url(imagenes/fondogusy.png);">
+<div data-role="page" data-theme="a" id="pagina1" >
   
  
   <div data-role="header" data-position="fixed">
@@ -121,121 +121,24 @@ init();
     <h1>DiarioKid</h1>
     <a href="" data-role="button" class="ui-btn-right" data-mini="true" data-icon="power" onClick="desconectar()" data-iconpos="notext"></a>
   </div>
-	<a href="#" data-role="button" data-icon="arrow-l" onClick="fechaatras(1), buscarobserva2(0), pagAtras(0), medAtras(0), tarAtras(0)" data-iconpos="notext" data-inline="true" style="margin-left: 10px;"></a>    
-   	<a href="#" data-role="button" data-icon="arrow-r" onClick="fechanext(-1), buscarobserva3(0), Avanzapag(0), medAvanza(0), tarAvanza(0)" data-iconpos="notext" style="float:right" data-inline="true"></a>
-  <div data-role="main" class="ui-content">
-  
-    <div id="hijo1" class="hijos1">
-    <input name="nombrealumno1" type="hidden" id="nombrealumno1"> 
-    <input name="elprimerhijo" type="hidden" id="elprimerhijo">
-        <div class="ui-grid-c" align="center" style="width:100%;">
-        <span id="nombre1" class="nombre1"></span><span class="derecha" id="fecha1"></span><br>
-        <hr style="width:98%;">
-                <!-- fila 1 -->
-                <div class="ui-block-a" style="width:25%;"></div> 
-                <div class="ui-block-b" style="width:25%;"><strong>Mañana</strong></div>  
-                <div class="ui-block-c" style="width:25%;"><strong>Mediodía</strong></div> 
-                <div class="ui-block-d" style="width:25%;"><strong>Tarde</strong></div> 
-        
-                <!-- fila 2 -->  
-                <div class="ui-block-a"><img src="imagenes/carro.png"></div>         	
-                <div class="ui-block-b"><img src="" id=mcarro1></div>  
-                <div class="ui-block-c"><img src="" id=mecarro1> </div> 
-                <div class="ui-block-d"><img src="" id=tcarro1></div> 
-                
-                <!-- fila 3 -->  
-                <div class="ui-block-a"><img src="imagenes/cuchara.png"></div>         	
-                <div class="ui-block-b"><img src="" id=mbiberon1></div>              
-                <div class="ui-block-c"><img src="" id=mebiberon1></div>             
-                <div class="ui-block-d"><img src="" id=tbiberon1></div>  
-                
-                 <!-- fila 4 -->  
-                <div class="ui-block-a"><img src="imagenes/pelota.png"></div>         	
-                <div class="ui-block-b"><img src="" id=mpelota1></div>              
-                <div class="ui-block-c"><img src="" id=mepelota1></div>             
-                <div class="ui-block-d"><img src="" id=tpelota1></div>
-                
-                 <!-- fila 5 -->  
-                <div class="ui-block-a"><img src="imagenes/panal.png"></div> 
-                <div class="ui-block-b"><img src="" id=mpanal1></div>              
-                <div class="ui-block-c"><img src="" id=mepanal1></div>             
-                <div class="ui-block-d"><img src="" id=tpanal1></div> 
-                
-                 <!-- fila 6 -->  
-                <div class="ui-block-a"><img src="imagenes/termometro.png"></div> 
-                <div class="ui-block-b"><img src="" id=mcorazon1></div>              
-                <div class="ui-block-c"><img src="" id=mecorazon1></div>             
-                <div class="ui-block-d"><img src="" id=tcorazon1></div> 
-      
-            </div>
-			<hr style="width:98%;">
-        	<span style="margin-left:2%"><strong >Nota:</strong></span><span id="observaciones" style="margin-left:1%;"></span>
-   		</div><!---fin hijo1--->
-        <br>
-        
-        <div id="hijo2" class="hijos2" style="display:none;">
-        <input name="nombrealumno2" type="hidden" id="nombrealumno2">
-        <input name="elsegundohijo" type="hidden" id="elsegundohijo">
-        <div class="ui-grid-c" align="center" style="width:100%;">
-        <span id="nombre2" class="nombre1"></span><span class="derecha" id="fecha2"></span><br>
-        <hr style="width:98%;">
-                <!-- fila 1 -->
-                <div class="ui-block-a" style="width:25%;"></div> 
-                <div class="ui-block-b" style="width:25%; margin-bottom:3%;"><strong>Mañana</strong></div>  
-                <div class="ui-block-c" style="width:25%; margin-bottom:3%;"><strong>Mediodía</strong></div> 
-                <div class="ui-block-d" style="width:25%; margin-bottom:3%;"><strong>Tarde</strong></div> 
-        
-                <!-- fila 2 -->  
-                <div class="ui-block-a"><img src="imagenes/carro.png"></div>         	
-                <div class="ui-block-b"><img src="" id=mcarro2 ></div>  
-                <div class="ui-block-c"><img src="" id=mecarro2> </div> 
-                <div class="ui-block-d"><img src="" id=tcarro2></div> 
-                
-                <!-- fila 3 -->  
-                <div class="ui-block-a"><img src="imagenes/cuchara.png"></div>         	
-                <div class="ui-block-b"><img src="" id=mbiberon2></div>              
-                <div class="ui-block-c"><img src="" id=mebiberon2></div>             
-                <div class="ui-block-d"><img src="" id=tbiberon2></div>  
-                
-                 <!-- fila 4 -->  
-                <div class="ui-block-a"><img src="imagenes/pelota.png"></div>         	
-                <div class="ui-block-b"><img src="" id=mpelota2></div>              
-                <div class="ui-block-c"><img src="" id=mepelota2></div>             
-                <div class="ui-block-d"><img src="" id=tpelota2></div>
-                
-                 <!-- fila 5 -->  
-                <div class="ui-block-a"><img src="imagenes/panal.png"></div> 
-                <div class="ui-block-b"><img src="" id=mpanal2></div>              
-                <div class="ui-block-c"><img src="" id=mepanal2></div>             
-                <div class="ui-block-d"><img src="" id=tpanal2></div> 
-                
-                 <!-- fila 6 -->  
-                <div class="ui-block-a"><img src="imagenes/termometro.png"></div> 
-                <div class="ui-block-b"><img src="" id=mcorazon2></div>              
-                <div class="ui-block-c"><img src="" id=mecorazon2></div>             
-                <div class="ui-block-d"><img src="" id=tcorazon2></div> 
-      
-            </div>
-			<hr style="width:98%;">
-        	<span style="margin-left:2%"><strong >Nota:</strong></span><span id="observaciones2" style="margin-left:1%;"></span><br>
-   		</div><!---fin hijo 2--->
-        
-        
-
-    </div>
+	  
+    	<div data-role="main" class="ui-content" style="margin:0; padding:0; position:fixed; width:100%">
+   		 <img id="portada" src="" height="0%" width="100%">
+        </div><!-- FIN CONTENT-->
 
   <div data-role="footer" data-position="fixed"> 
    <div data-role="navbar">
             <ul>
-            <li><a id="menu" href="#pagina1" data-role="button" data-icon="calendar" onClick="init()" style="background-color:#e6697b">Diario</a></li>
-            <li><a id="menu" href="#pagina3" data-role="button" data-icon="mail" onClick="crearLista()" style="background-color:#418d6a"><img src="" class="globo" style="float:left" >  Mensajes</a></li>
-            <li><a id="menu" href="#pagina4" data-role="button" data-icon="camera" onClick="listaFotos()" style="background-color:#4779b2"><img src="" class="globofoto" style="float:left"> Fotos</a></li>
+            <li><a id="menu"  data-role="button" data-icon="home" onClick="init()" style="background-color:#fa8ea5">Inicio</a></li>
+            <li><a id="menu" href="#pagina3" data-role="button" data-icon="mail" onClick="crearLista()" style="background-color:#8cc63e"><img src="" class="globo" style="float:left" >  Mensajes</a></li>
+            <li><a id="menu" href="#pagina4" data-role="button" data-icon="camera" onClick="listaFotos()" style="background-color:#9dcde3"><img src="" class="globofoto" style="float:left"> Fotos</a></li>
             <li><a id="menu" href="#pagina6" data-role="button" data-icon="plus" style="background-color:#e8df58">Más...</a></li>
             </ul>
 	</div>
   </div>
 </div> 
 <!-- FIN PAGINA 1-->
+
 <!---------------------------PAGINA 2--------------------------------------->
 <div data-role="page" data-theme="a" id="pagina2">
   <div data-role="header" data-position="fixed" >
@@ -292,7 +195,7 @@ init();
    <div>
          <!-- Botones de registro -->
          <center>
-      <a id="menu" href="#pagina7" onClick="" data-icon="check" data-iconpos="left" data-role="button" data-rel="dialog" style="width:40%; background-color:#418d6a">Guardar</a>
+      <a id="menu" href="#pagina7" onClick="" data-icon="check" data-iconpos="left" data-role="button" data-rel="dialog" style="width:40%; background-color:#8cc63e">Guardar</a>
       	</center>
    </div> 
    
@@ -309,9 +212,9 @@ init();
 <div data-role="page" id="pagina3" style="background:url(imagenes/fondogusy.png);">
 	
     <div data-role="header" data-position="fixed">   
-	<a href="#pagina1" data-role="button" data-icon="back" data-iconpos="notext" onClick="init()">Atrás</a>
+	<a  data-role="button" data-icon="back" data-iconpos="notext" onClick="init()">Atrás</a>
       <h1>CIRCULARES</h1>
-	<a href="#pagina1" data-role="button" data-icon="home" data-iconpos="notext" onClick="init()">Inicio</a>
+	<a  data-role="button" data-icon="home" data-iconpos="notext" onClick="init()">Inicio</a>
     </div> 
 	
 	 <div data-role="content" id="contenido" style="margin-top:0; padding-top:0;">
@@ -403,9 +306,9 @@ init();
   <div data-role="footer" data-theme="a" data-position="fixed">
     <div data-role="navbar" >
     <ul>
-    <li><a id="menu" href="#pagina1" data-role="button" data-icon="calendar" onClick="init()" style="background-color:#e6697b">Diario</a></li>
-    <li><a id="menu" href="#pagina3" data-role="button" data-icon="mail" onClick="crearLista()" style="background-color:#418d6a"><img src="" class="globo" style="float:left" >  Mensajes</a></li>
-    <li><a id="menu" href="#pagina4" data-role="button" data-icon="camera" onClick="listaFotos()" style="background-color:#4779b2;"><img src="" class="globofoto" style="float:left"> Fotos</a></li>
+    <li><a id="menu"  data-role="button" data-icon="home" onClick="init()" style="background-color:#fa8ea5">Inicio</a></li>
+    <li><a id="menu" href="#pagina3" data-role="button" data-icon="mail" onClick="crearLista()" style="background-color:#8cc63e"><img src="" class="globo" style="float:left" >  Mensajes</a></li>
+    <li><a id="menu" href="#pagina4" data-role="button" data-icon="camera" onClick="listaFotos()" style="background-color:#9dcde3;"><img src="" class="globofoto" style="float:left"> Fotos</a></li>
     <li><a id="menu" href="#pagina6" data-role="button" data-icon="plus" style="background-color:#e8df58">Más...</a></li>
     </ul>
 	</div>
@@ -421,7 +324,7 @@ init();
 	 
      
 	<div data-role="header" data-position="fixed" data-theme="a">
-    <a href="#pagina1" data-role="button" data-transition="slide" data-icon="carat-l" data-iconpos="notext" onClick="" data-theme="a">Atrás</a>
+    <a  data-role="button" data-transition="slide" data-icon="carat-l" data-iconpos="notext" onClick="init()" data-theme="a">Atrás</a>
 		<h1>COMUNICACIÓN</h1>
 	</div>
 	
@@ -430,20 +333,20 @@ init();
         
       <div class="ui-grid-a" style="margin-top:10%" >
         	<div class="ui-block-a">
-            	<center><a onClick="listacorreo();"><img src="imagenes/autorizar.png" width="80" height="80"/></a></center>          
+            	<center><a onClick="listacorreo();"><img src="imagenes/jirafa.png" width="80" height="80"/></a><label>Autorizar</label></center>          
             </div>
             <div class="ui-block-b">        
-            	<center><a onClick="listacorreo();"><img src="imagenes/medicacion.png" width="80" height="80" style="margin-top:-5px;"/></a></center> 
+            	<center><a onClick="listacorreo();"><img src="imagenes/mono.png" width="80" height="80"/></a><label>Medicación</label></center> 
             </div>          
         </div>
         <div class="ui-grid-a" style="margin-top:10%;">
         	<div class="ui-block-a">
             	<center>
-                <a href="" onClick="listaweb();"><img src="imagenes/web.png" width="78" height="78"/></a>
+                <a href="" onClick="listaweb();"><img src="imagenes/ballena.png" width="78" height="78"/></a><label>Web</label>
             	</center>                          
           </div>
             <div class="ui-block-b">        
-            	<center><a href="#pagina5"><img src="imagenes/ayuda.png" width="78" height="78"/></a></center>
+            	<center><a href="#pagina5"><img src="imagenes/oveja.png" width="78" height="78"/></a><label>Ayuda</label></center>
           </div>          
         </div>  
         	   
@@ -454,9 +357,9 @@ init();
   <div data-role="footer" data-theme="a" data-position="fixed">
     <div data-role="navbar" >
     <ul>
-    <li><a id="menu" href="#pagina1" data-role="button" data-icon="calendar" onClick="init()" style="background-color:#e6697b">Diario</a></li>
-    <li><a id="menu" href="#pagina3" data-role="button" data-icon="mail" onClick="crearLista()" style="background-color:#418d6a"><img src="" class="globo" style="float:left" >  Mensajes</a></li>
-    <li><a id="menu" href="#pagina4" data-role="button" data-icon="camera" onClick="listaFotos()" style="background-color:#4779b2;"><img src="" class="globofoto" style="float:left"> Fotos</a></li>
+    <li><a id="menu"  data-role="button" data-icon="home" onClick="init()" style="background-color:#fa8ea5">Inicio</a></li>
+    <li><a id="menu" href="#pagina3" data-role="button" data-icon="mail" onClick="crearLista()" style="background-color:#8cc63e"><img src="" class="globo" style="float:left" >  Mensajes</a></li>
+    <li><a id="menu" href="#pagina4" data-role="button" data-icon="camera" onClick="listaFotos()" style="background-color:#9dcde3;"><img src="" class="globofoto" style="float:left"> Fotos</a></li>
     <li><a id="menu" href="#pagina6" data-role="button" data-icon="plus" style="background-color:#e8df58">Más...</a></li>
     </ul>
 	</div>
@@ -520,9 +423,9 @@ Asimismo, CREATÁCTIL S.L se compromete a adoptar en todo momento los niveles de
 <div data-role="page" id="pagina4" style="background:url(imagenes/fondogusy.png);">
 	
     <div data-role="header" data-position="fixed">   
-	<a href="#pagina1" data-role="button" data-icon="back" data-iconpos="notext" onClick="init()">Atrás</a>
+	<a  data-role="button" data-icon="back" data-iconpos="notext" onClick="init()">Atrás</a>
       <h1>FOTOS</h1>
-	<a href="#pagina1" data-role="button" data-icon="home" data-iconpos="notext" onClick="init()">Inicio</a>
+	<a  data-role="button" data-icon="home" data-iconpos="notext" onClick="init()">Inicio</a>
     </div> 
 	
 	 <div data-role="content" id="contenido" style="margin-top:0; padding-top:0;">
@@ -612,8 +515,8 @@ Asimismo, CREATÁCTIL S.L se compromete a adoptar en todo momento los niveles de
 	   	    
             <center>
             <div data-role="controlgroup" data-type="horizontal">
-             <a href="#pagina1" data-role="button" data-icon="back" style="background-color:#4779b2;">No</a>
-			<a href="#pagina2" data-role="button" onClick="nuevoAlumno()" data-icon="check" style="background-color:#418d6a">Si</a>
+             <a href="#pagina1" data-role="button" data-icon="back" style="background-color:#9dcde3;">No</a>
+			<a href="#pagina2" data-role="button" onClick="nuevoAlumno()" data-icon="check" style="background-color:#8cc63e">Si</a>
             </div>
             </center>
             </div>

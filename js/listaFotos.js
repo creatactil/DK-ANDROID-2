@@ -100,9 +100,9 @@ function listaFotos(data) {
 		
 		 '<div data-role="navbar" class="ui-navbar" role="navigation">'+
          '<ul class="ui-grid-c">'+
-         '<li class="ui-block-a"><a id="menu" href="#pagina1" data-role="button" data-icon="calendar" onclick="init()" class="ui-link ui-btn ui-icon-calendar ui-btn-icon-top ui-shadow ui-corner-all" role="button" style="background-color:#e6697b">Diario</a></li>'+
-         '<li class="ui-block-b"><a id="menu" href="#pagina3" data-role="button" data-icon="mail" onclick="crearLista()" class="ui-link ui-btn ui-icon-mail ui-btn-icon-top ui-shadow ui-corner-all" role="button" style="background-color:#418d6a"><img src="" class="globo" style="float:left">  Mensajes</a></li>'+
-         '<li class="ui-block-c"><a id="menu" href="#pagina4" data-role="button" data-icon="camera" onclick="listaFotos()" class="ui-link ui-btn ui-icon-camera ui-btn-icon-top ui-shadow ui-corner-all" role="button" style="background-color:#4779b2"><img src="" class="globofoto" style="float:left"> Fotos</a></li>'+
+         '<li class="ui-block-a"><a id="menu"  data-role="button" data-icon="home" onclick="init()" class="ui-link ui-btn ui-icon-home ui-btn-icon-top ui-shadow ui-corner-all" role="button" style="background-color:#fa8ea5">Inicio</a></li>'+
+         '<li class="ui-block-b"><a id="menu"  data-role="button" data-icon="mail" onclick="crearLista()" class="ui-link ui-btn ui-icon-mail ui-btn-icon-top ui-shadow ui-corner-all" role="button" style="background-color:#8cc63e"><img src="" class="globo" style="float:left">  Mensajes</a></li>'+
+         '<li class="ui-block-c"><a id="menu"  data-role="button" data-icon="camera" onclick="listaFotos()" class="ui-link ui-btn ui-icon-camera ui-btn-icon-top ui-shadow ui-corner-all" role="button" style="background-color:#9dcde3"><img src="" class="globofoto" style="float:left"> Fotos</a></li>'+
 	     '<li class="ui-block-d"><a id="menu" href="#pagina6" data-role="button" data-icon="plus" class="ui-link ui-btn ui-icon-plus ui-btn-icon-top ui-shadow ui-corner-all" role="button" style="background-color:#e8df58">Más...</a></li>'+
 		 '</ul></div>'
 		

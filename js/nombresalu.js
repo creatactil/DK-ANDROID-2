@@ -73,6 +73,7 @@ function buscarobserva1() {
 							var elprimeroO = $("#elprimerhijo").val();
 							var elsegundoO = $("#elsegundohijo").val();
 							
+												
 							if(elprimeroO == onombre){
 								$("#observaciones").text(observa);							
 									
