@@ -48,6 +48,8 @@
    <gap:platform name="android" />       
   
     <!-- Plugins -->
+	
+		<plugin name="com.phonegap.plugins.pushplugin" spec="2.5.0" source="pgb" />
 
     <!-- Core plugins
 		<gap:plugin name="com.phonegap.plugins.pushplugin" version="2.4.0" />
