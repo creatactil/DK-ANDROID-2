@@ -52,7 +52,7 @@
 		<plugin name="com.phonegap.plugins.pushplugin" source="pgb" spec="2.5.0" />
 		<plugin name="org.apache.cordova.battery-status" source="pgb" spec="0.2.11" />
 		<plugin name="org.apache.cordova.camera" source="pgb" spec="0.3.2" />
-		<plugin name="org.apache.cordova.console" source="pgb" spec="n/a" />
+		<plugin name="org.apache.cordova.console" source="pgb" spec="0.2.13" />
 		<plugin name="org.apache.cordova.contacts" source="pgb" spec="0.2.13" />
 		<plugin name="org.apache.cordova.device" source="pgb" spec="0.2.12" />
 		<plugin name="org.apache.cordova.device-motion" source="pgb" spec="0.2.10" />
