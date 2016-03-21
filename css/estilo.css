@@ -74,14 +74,9 @@
 	color:#FFF
 	}
 	
-.globofoto{
-	float:left;
-	height:15px;
-	
-	}
-	
 .globo{
-	float:left;
-	height:15px;
-	
+	margin-top:-20px;
+	}
+.globofoto{
+	margin-top:-20px;
 	}

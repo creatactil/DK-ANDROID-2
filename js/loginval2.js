@@ -45,12 +45,12 @@ function loginVal2(){
 				localStorage.pa2 = xpa2;
 				
 				$.mobile.changePage("#pagina1");
-				nhijos();
-				nombresalu();
-				dmanana();
-				dmediodia();
-				dtarde();
-				comprobarid()
+				//nhijos();
+				//nombresalu();
+				//dmanana();
+				//dmediodia();
+				//dtarde();
+				
 				globo();
 
 			});
@@ -59,6 +59,7 @@ function loginVal2(){
 		
 
 });
+setTimeout('comprobarid()',8000);
 }
 
 function comprobarid(){
@@ -66,8 +67,8 @@ function comprobarid(){
 	var xregid = $("#regId").val();
 	var xdni = localStorage.dni;
 	
-	
-	$.ajax({
+	if ((xregid != "") && (xdni != "")){
+		$.ajax({
 		url: 'http://ci.creatactil.com/php/comprobarid.php',
 		dataType: 'jsonp',
 		jsonp: 'jsoncallback',
@@ -77,7 +78,7 @@ function comprobarid(){
 		
 			});
 	
-	
+	}
 	}
 
 

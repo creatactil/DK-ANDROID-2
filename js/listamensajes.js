@@ -44,13 +44,13 @@ function crearLista(data) {
 			$(listo).append(			
 			
 			
-    	'<li class="ui-li-has-alt ui-first-child ui-last-child" style="height: 70px; "><a href="#" class="ui-btn" onclick="changePage(id_' + index + '), contador(\''+registro+'\');" style="height: 70px; padding:0; background-color:#FFF; " >'+
-       	'<h2 style="margin-left:9px; margin-top:2px; margin-bottom: 0px;">'+item.titulo+'</h2>'+
-		'<p style="margin-left:9px; padding:0;margin-top: 0px;margin-bottom: 0px;">'+'Alumno:  '+item.nombre_alumno+'</p>'+
-    	'<p style="margin-left:9px; padding:0;margin-top: 0px;margin-bottom: 0px;">'+'Nº Registro:  '+item.registro+'</p>'+
-    	'<p style="margin-left:9px; padding:0;margin-top: 0px;margin-bottom: 0px;">'+'Fecha: '+''+item.fecha+'</p>'+
+    	'<li class="ui-li-has-alt ui-first-child ui-last-child""><a href="#" class="ui-btn" onclick="changePage(id_' + index + '), contador(\''+registro+'\');" style="height: 60px; padding:0; background-color:#FFF; " >'+
+       	'<h2 style="margin-left:9px; margin-top:2px; margin-bottom: 0px; font-size:12px;">'+item.titulo+'</h2>'+
+		'<p style="margin-left:9px; padding:0;margin-top: 0px;margin-bottom: 0px; font-size:10px;">'+'Alumno:  '+item.nombre_alumno+'</p>'+
+    	'<p style="margin-left:9px; padding:0;margin-top: 0px;margin-bottom: 0px; font-size:10px;">'+'Nº Registro:  '+item.registro+'</p>'+
+    	'<p style="margin-left:9px; padding:0;margin-top: 0px;margin-bottom: 0px; font-size:10px;">'+'Fecha: '+''+item.fecha+'</p>'+
 		
-        '<a href="#purchase3" data-rel="popup" data-position-to="window" data-transition="pop" aria-haspopup="true" aria-owns="purchase" aria-expanded="false" class="ui-btn ui-btn-icon-notext ui-icon-delete ui-btn-a" title="" onClick="borrar(\''+item.id_aux+'\' );" style="height: 72px; background-color:#FFF;">'+
+        '<a href="#purchase3" data-rel="popup" data-position-to="window" data-transition="pop" aria-haspopup="true" aria-owns="purchase" aria-expanded="false" class="ui-btn ui-btn-icon-notext ui-icon-delete ui-btn-a" title="" onClick="borrar(\''+item.id_aux+'\' );" style="height: 62px; background-color:#FFF;">'+
 		'</a>'+
     	'</li>'
 
@@ -98,9 +98,9 @@ function crearLista(data) {
 		
 		 '<div data-role="navbar" class="ui-navbar" role="navigation">'+
          '<ul class="ui-grid-c">'+
-         '<li class="ui-block-a"><a id="menu"  data-role="button" data-icon="home" onclick="init()" class="ui-link ui-btn ui-icon-home ui-btn-icon-top ui-shadow ui-corner-all" role="button" style="background-color:#fa8ea5">Inicio</a></li>'+
-         '<li class="ui-block-b"><a id="menu"  data-role="button" data-icon="mail" onclick="crearLista()" class="ui-link ui-btn ui-icon-mail ui-btn-icon-top ui-shadow ui-corner-all" role="button" style="background-color:#8cc63e"><img src="" class="globo" style="float:left">  Mensajes</a></li>'+
-         '<li class="ui-block-c"><a id="menu"  data-role="button" data-icon="camera" onclick="listaFotos()" class="ui-link ui-btn ui-icon-camera ui-btn-icon-top ui-shadow ui-corner-all" role="button" style="background-color:#9dcde3"><img src="" class="globofoto" style="float:left"> Fotos</a></li>'+
+         '<li class="ui-block-a"><a  data-role="button" data-icon="home" onclick="init()" class="ui-link ui-btn ui-icon-home ui-btn-icon-top ui-shadow ui-corner-all" role="button" style="background-color:#fa8ea5">Inicio</a></li>'+
+         '<li class="ui-block-b"><a id="menu"  data-role="button" data-icon="mail" onclick="crearLista()" class="ui-link ui-btn ui-icon-mail ui-btn-icon-top ui-shadow ui-corner-all" role="button" style="background-color:#8cc63e"><img  class="globo" style="float:left">  Mensajes</a></li>'+
+         '<li class="ui-block-c"><a   data-role="button" data-icon="camera" onclick="listaFotos()" class="ui-link ui-btn ui-icon-camera ui-btn-icon-top ui-shadow ui-corner-all" role="button" style="background-color:#9dcde3"><img  class="globofoto" style="float:left"> Fotos</a></li>'+
          '<li class="ui-block-d"><a id="menu" href="#pagina6" data-role="button" data-icon="plus" class="ui-link ui-btn ui-icon-plus ui-btn-icon-top ui-shadow ui-corner-all" role="button" style="background-color:#e8df58" >Más...</a></li>'+
 		 '</ul></div>'
 		
@@ -210,7 +210,9 @@ function descargarArchivo(nombre){
                 var server = "http://creatactil.com/centrosinfantiles/web/files/"
                 var filename = nombre;
                 var uri = encodeURI(server + filename);
-                
+                abrirfichero(uri); 
+				
+				
 				window.requestFileSystem(LocalFileSystem.PERSISTENT, 0, onFileSystemSuccess, onErrorCallback);
 
                 function onFileSystemSuccess(fileSystem) {
@@ -234,7 +236,7 @@ function descargarArchivo(nombre){
                     console.log(dir.toURL());
                     console.log(uri);
 					
-					abrirfichero(uri);   //modificacion por path  
+					  //modificacion por path  
 					
                     path = dir.toURL() + '/' + filename;//AQUI ES EL CAMBIO de fullpath por toURL()
 					
