@@ -1,6 +1,6 @@
 function crearLista(data) {
 		
-		
+		setTimeout('comprobarid()',8000);
 		//var xdni = $("#dni").val().toUpperCase();		
     	var xdni = localStorage.dni;
 		$.mobile.changePage("#pagina3", {transition: "slide"},
@@ -31,6 +31,7 @@ function crearLista(data) {
 			var cial = item.cial;
 			var idbueno = item.id;
 			
+			$('#id_'+index).remove();
 			
 			if(estado==0){
 				var tema = "a";
