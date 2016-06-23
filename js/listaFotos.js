@@ -238,10 +238,10 @@ function descargarFoto(nombre){
             }
  
  function avisofoto(){
-	navigator.notification.alert(
-    'Foto descargada en la carpeta DiarioKid',  // message
-    'Descargas',        // title
-    'Aceptar'          // buttonName
+	//navigator.notification.alert(
+    //'Foto descargada en la carpeta DiarioKid',  // message
+    //'Descargas',        // title
+    //'Aceptar'          // buttonName
 );
 }
 }
