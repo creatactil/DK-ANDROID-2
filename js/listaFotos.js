@@ -32,18 +32,20 @@ function listaFotos(data) {
 			var cial = item.cial;
 			
 			if(estado==0){
-				var tema = "a";
+				
+				var tema = "#000000";
 				var listo = "#lista";
 				
 				}else{	
-				var tema = "c";
-				var listo = "#lista1";}
+				var tema = "#A4A4A4";
+				var listo = "#lista";
+				}
 									
 			$(listo).append(			
 			
 			
     	'<li class="ui-li-has-alt ui-first-child ui-last-child"><a href="#" class="ui-btn" onclick="changePage(id_' + index + '), contador(\''+registro+'\');" style="height: 60px; padding:0; background-color:#FFF; ">'+
-       	'<h2 style="margin-left:9px; margin-top:2px; margin-bottom: 0px; font-size:13px;">'+item.titulo+'</h2>'+
+       	'<h2 style="color:'+tema+'; margin-left:9px; margin-top:2px; margin-bottom: 0px; font-size:13px;">'+item.titulo+'</h2>'+
 		'<p style="margin-left:9px; padding:0;margin-top: 0px;margin-bottom: 0px; font-size:10px;">'+'Alumno:  '+item.nombre_alumno+'</p>'+
     	'<p style="margin-left:9px; padding:0;margin-top: 0px;margin-bottom: 0px; font-size:10px;">'+'Nº Registro:  '+item.registro+'</p>'+
     	'<p style="margin-left:9px; padding:0;margin-top: 0px;margin-bottom: 0px; font-size:10px;">'+'Fecha: '+''+item.fecha+'</p>'+
@@ -237,13 +239,13 @@ function descargarFoto(nombre){
                 console.log(error);
             }
  
- function avisofoto(){
-	//navigator.notification.alert(
-    //'Foto descargada en la carpeta DiarioKid',  // message
-    //'Descargas',        // title
-    //'Aceptar'          // buttonName
+ /*function avisofoto(){
+	navigator.notification.alert(
+    'Foto descargada en la carpeta DiarioKid',  // message
+    'Descargas',        // title
+    'Aceptar'          // buttonName
 );
-}
+}*/
 }
 
 function abrirfichero5(ruta5){
