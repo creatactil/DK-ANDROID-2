@@ -130,8 +130,8 @@ init();
    <div data-role="navbar">
             <ul>
             <li><a  data-role="button" data-icon="home" onClick="init()" style="background-color:#fa8ea5">Inicio</a></li>
-            <li><a  href="#pagina3" data-role="button" data-icon="mail" onClick="crearLista()" style="background-color:#8cc63e"><img  class="globo" style="float:left" >  Mensajes</a></li>
-            <li><a href="#pagina4" data-role="button" data-icon="camera" onClick="listaFotos()" style="background-color:#9dcde3"><img  class="globofoto" style="float:left"> Fotos</a></li>
+            <li><a  href="#pagina3" data-role="button" data-icon="mail" onClick="crearLista();comprobarid()" style="background-color:#8cc63e"><img  class="globo">Mensajes</a></li>
+            <li><a href="#pagina4" data-role="button" data-icon="camera" onClick="listaFotos()" style="background-color:#9dcde3"><img  class="globofoto" >Fotos</a></li>
             <li><a  href="#pagina6" data-role="button" data-icon="plus" style="background-color:#e8df58">Más...</a></li>
             </ul>
 	</div>
@@ -307,8 +307,8 @@ init();
     <div data-role="navbar" >
     <ul>
     <li><a   data-role="button" data-icon="home" onClick="init()" style="background-color:#fa8ea5">Inicio</a></li>
-    <li><a  href="#pagina3" data-role="button" data-icon="mail" onClick="crearLista()" style="background-color:#8cc63e"><img  class="globo" style="float:left" >  Mensajes</a></li>
-    <li><a  href="#pagina4" data-role="button" data-icon="camera" onClick="listaFotos()" style="background-color:#9dcde3;"><img  class="globofoto" style="float:left"> Fotos</a></li>
+    <li><a  href="#pagina3" data-role="button" data-icon="mail" onClick="crearLista()" style="background-color:#8cc63e"><img  class="globo"  >  Mensajes</a></li>
+    <li><a  href="#pagina4" data-role="button" data-icon="camera" onClick="listaFotos()" style="background-color:#9dcde3;"><img  class="globofoto" > Fotos</a></li>
     <li><a  href="#pagina6" data-role="button" data-icon="plus" style="background-color:#e8df58">Más...</a></li>
     </ul>
 	</div>
@@ -316,7 +316,7 @@ init();
     </div>
 	 
 </div> 
-</div>
+
 
 
 <!----------------------------PAGINA 6-------------------------------->
@@ -358,8 +358,8 @@ init();
     <div data-role="navbar" >
     <ul>
     <li><a   data-role="button" data-icon="home" onClick="init()" style="background-color:#fa8ea5">Inicio</a></li>
-    <li><a  href="#pagina3" data-role="button" data-icon="mail" onClick="crearLista()" style="background-color:#8cc63e"><img  class="globo" style="float:left" >  Mensajes</a></li>
-    <li><a  href="#pagina4" data-role="button" data-icon="camera" onClick="listaFotos()" style="background-color:#9dcde3;"><img  class="globofoto" style="float:left"> Fotos</a></li>
+    <li><a  href="#pagina3" data-role="button" data-icon="mail" onClick="crearLista()" style="background-color:#8cc63e"><img  class="globo"  >  Mensajes</a></li>
+    <li><a  href="#pagina4" data-role="button" data-icon="camera" onClick="listaFotos()" style="background-color:#9dcde3;"><img  class="globofoto" > Fotos</a></li>
     <li><a  href="#pagina6" data-role="button" data-icon="plus" style="background-color:#e8df58">Más...</a></li>
     </ul>
 	</div>
@@ -463,19 +463,20 @@ Asimismo, CREATÁCTIL S.L se compromete a adoptar en todo momento los niveles de
 <div data-role="page" id="page11" data-theme="a">
 	
     <div data-role="header" data-add-back-btn="true" data-iconpos="notext" >  
-	  <h1>Firmar Autorización</h1>
+	 <a  data-role="button" data-icon="back" data-iconpos="notext" onClick="init()">Atrás</a> 
+      <h1>Firmar Autorización</h1>
 	</div> 
 	
 	 <div data-role="content" id="firma">
 	   <p>
-           <strong> Autorización Paterna, Materna o Tutor Legal:</strong></p>
+           <strong> Autorización Paterna, Materna o Tutor Legal:</strong>
 	   		<br>
            	
 	   	             
-             <label>Nº de registro: </label><span id="registrofirma"></span>
+            Nº de registro: <span id="registrofirma"></span>
             <br>
 			<span hidden="true" id="cialfirma"></span>        
-            <label>Nombre: </label><span id="nombrefirma"></span>
+            Nombre: <span id="nombrefirma"></span>
            
             
             <br>
@@ -486,8 +487,8 @@ Asimismo, CREATÁCTIL S.L se compromete a adoptar en todo momento los niveles de
 	   	    
             <center>
             <div data-role="controlgroup" data-type="horizontal">
-             <a href="#" data-role="button" data-rel="back" data-icon="back">Cancelar</a>
-			<a href="#" data-role="button" onClick="firma()" data-icon="check">Aceptar</a>
+            <a  data-role="button" data-icon="back" onClick="init()">No Confirmar</a> 
+			<a href="#" data-role="button" onClick="firma()" data-icon="check">Confirmar</a>
             </div>
             </center>
             </div>

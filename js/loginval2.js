@@ -59,7 +59,8 @@ function loginVal2(){
 		
 
 });
-setTimeout('comprobarid()',8000);
+comprobarid();
+portada();
 }
 
 function comprobarid(){

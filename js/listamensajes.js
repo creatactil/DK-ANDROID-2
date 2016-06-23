@@ -1,7 +1,6 @@
-function crearLista(data) {
+function crearLista() {
 		
-		setTimeout('comprobarid()',8000);
-		//var xdni = $("#dni").val().toUpperCase();		
+			
     	var xdni = localStorage.dni;
 		$.mobile.changePage("#pagina3", {transition: "slide"},
             true,
@@ -100,8 +99,8 @@ function crearLista(data) {
 		 '<div data-role="navbar" class="ui-navbar" role="navigation">'+
          '<ul class="ui-grid-c">'+
          '<li class="ui-block-a"><a  data-role="button" data-icon="home" onclick="init()" class="ui-link ui-btn ui-icon-home ui-btn-icon-top ui-shadow ui-corner-all" role="button" style="background-color:#fa8ea5">Inicio</a></li>'+
-         '<li class="ui-block-b"><a id="menu"  data-role="button" data-icon="mail" onclick="crearLista()" class="ui-link ui-btn ui-icon-mail ui-btn-icon-top ui-shadow ui-corner-all" role="button" style="background-color:#8cc63e"><img  class="globo" style="float:left">  Mensajes</a></li>'+
-         '<li class="ui-block-c"><a   data-role="button" data-icon="camera" onclick="listaFotos()" class="ui-link ui-btn ui-icon-camera ui-btn-icon-top ui-shadow ui-corner-all" role="button" style="background-color:#9dcde3"><img  class="globofoto" style="float:left"> Fotos</a></li>'+
+         '<li class="ui-block-b"><a id="menu"  data-role="button" data-icon="mail" onclick="crearLista()" class="ui-link ui-btn ui-icon-mail ui-btn-icon-top ui-shadow ui-corner-all" role="button" style="background-color:#8cc63e"><img  class="globo" >  Mensajes</a></li>'+
+         '<li class="ui-block-c"><a   data-role="button" data-icon="camera" onclick="listaFotos()" class="ui-link ui-btn ui-icon-camera ui-btn-icon-top ui-shadow ui-corner-all" role="button" style="background-color:#9dcde3"><img  class="globofoto" > Fotos</a></li>'+
          '<li class="ui-block-d"><a id="menu" href="#pagina6" data-role="button" data-icon="plus" class="ui-link ui-btn ui-icon-plus ui-btn-icon-top ui-shadow ui-corner-all" role="button" style="background-color:#e8df58" >Más...</a></li>'+
 		 '</ul></div>'
 		
@@ -273,7 +272,7 @@ function descargarArchivo(nombre){
 function abrirfichero(ruta3){
 	
 	console.log(ruta3);
-	window.open (ruta3, '_system', 'location = yes, closebuttoncaption = done, enableViewportScale = yes');
+	window.open (ruta3, '_system', 'location=yes,closebuttoncaption=done,enableViewportScale=yes');
 	
 	
 	}

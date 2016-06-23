@@ -15,7 +15,7 @@ if (typeof xdni == 'undefined'){
 		//dtarde();
 		//buscarobserva1();
 		portada();
-		setTimeout('comprobarid()',8000);
+		comprobarid();
 		globo();
 		
 		
